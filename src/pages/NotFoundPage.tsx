@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { MapPin } from 'lucide-react'
+import { Button } from '@/components/ui/Button'
 
 export function NotFoundPage() {
   const navigate = useNavigate()
@@ -12,12 +13,9 @@ export function NotFoundPage() {
       <p className="mt-1 text-sm text-gray-500 dark:text-gray-500">
         The page you are looking for does not exist.
       </p>
-      <button
-        onClick={() => navigate('/')}
-        className="mt-6 rounded-lg bg-blue-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
-      >
+      <Button onClick={() => navigate('/')} className="mt-6">
         Go home
-      </button>
+      </Button>
     </div>
   )
 }
