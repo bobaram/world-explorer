@@ -32,7 +32,7 @@ Included in development. In a real deployment I would gate it behind `import.met
 
 **Where it helped:**
 
-- Scaffolding repetitive files — things like the skeleton placeholder markup, mock data objects, and boilerplate component structure that followed a pattern already established elsewhere in the codebase.
+- Scaffolding repetitive files — things like the skeleton placeholder markup, mock data objects, and boilerplate component structure that followed a pattern already established in design file.
 - Tailwind class composition — once the visual pattern was decided, Claude was useful for generating the matching `dark:` variants consistently across components.
 - Test file scaffolding — the initial structure of test files, MSW handler setup, and the `renderWithProviders` utility wrapper.
 
