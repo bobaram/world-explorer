@@ -1,4 +1,5 @@
 import { Search } from 'lucide-react'
+import { formFieldClasses } from './styles'
 
 interface InputProps {
   value: string
@@ -18,7 +19,7 @@ export function SearchInput({ value, onChange, placeholder = 'Search for a count
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 pl-10 pr-4 py-3 text-sm text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-shadow"
+        className={`w-full pl-10 pr-4 py-3 placeholder:text-gray-400 dark:placeholder:text-gray-500 ${formFieldClasses}`}
       />
     </div>
   )

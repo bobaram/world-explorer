@@ -1,4 +1,5 @@
 import { ChevronDown } from 'lucide-react'
+import { formFieldClasses } from './styles'
 
 interface SelectProps {
   value: string
@@ -13,7 +14,7 @@ export function Select({ value, onChange, options, placeholder = 'Filter by Regi
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full appearance-none rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-4 py-3 pr-10 text-sm text-gray-900 dark:text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-shadow cursor-pointer"
+        className={`w-full appearance-none px-4 py-3 pr-10 cursor-pointer ${formFieldClasses}`}
       >
         <option value="">{placeholder}</option>
         {options.map((opt) => (
