@@ -3,6 +3,8 @@ import type { Country } from '../types/country.types'
 
 const FIELDS = 'name,cca3,flags,population,region,subregion,capital,currencies,languages,borders'
 
+export const COUNTRIES_STALE_TIME = 1000 * 60 * 10
+
 export const countriesApi = {
   getAll: (): Promise<Country[]> =>
     httpClient

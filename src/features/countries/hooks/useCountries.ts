@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { useMemo } from 'react'
-import { countriesApi } from '../api/countries.api'
+import { countriesApi, COUNTRIES_STALE_TIME } from '../api/countries.api'
 import { useFilterStore } from '@/store/filterStore'
 import { useDebounce } from '@/hooks/useDebounce'
 
@@ -14,7 +14,7 @@ export function useCountries() {
   const query = useQuery({
     queryKey: COUNTRIES_QUERY_KEY,
     queryFn: countriesApi.getAll,
-    staleTime: 1000 * 60 * 10,
+    staleTime: COUNTRIES_STALE_TIME,
   })
 
   const filtered = useMemo(() => {
